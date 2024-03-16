@@ -11,4 +11,4 @@ Functionality:
 
 Screenshot of the web application:
 
-![ss](Screenshot%%2024-03-16%205235.png)
+![ss](https://github.com/ilovegaming42069/ToDoList/blob/main/Screenshot%202024-03-16%20205235.png)
