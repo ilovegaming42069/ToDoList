@@ -11,5 +11,4 @@ Functionality:
 
 Screenshot of the web application:
 
-![ss](Screenshot 2024-03-16 205235.png)
-
+![ss](Screenshot%2024-03-16%205235.png)
