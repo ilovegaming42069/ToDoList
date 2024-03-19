@@ -1,95 +1,144 @@
-*{
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
-body{
-  background-color: aqua;
+
+body {
+  background-color: #f0f2f5;
 }
-.main-container{
+
+.main-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-.center-container{
-  height: 500px;
+
+.center-container {
   width: 350px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.app-heading{
-  padding: 4px;
-  color: #8000FF;  
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+.app-heading {
+  color: #007bff;
   text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
   font-size: medium;
 }
-.input-container{
+
+.input-container, .filter-buttons {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-bottom: 10px;
 }
-.input-box-todo{
-  margin-left: 10px;
-  width: 70%;
-  height: 40px;
+
+.input-box-todo {
+  flex-grow: 1;
+  margin-right: 10px;
   border-radius: 14px;
-  border:1px solid black;
-  padding-left: 10px;  
-  box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+  border: 1px solid #ccc;
+  padding: 10px;
   outline: none;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: large;
 }
-.add-btn{
-  width:40px;
-  height:40px;
-  border-radius: 50%;
-  border:none;
-  background-color:#0080FF;
-  color: white;
-  font-weight: bolder;
-  font-size: larger;
-  margin-left: 10px;  
+
+.add-btn, .clear-all-btn, .filter-buttons button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  box-shadow: 0px 5px 10px rgba(11, 10, 10, 0.3);
-  transition: 0.3s;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
 }
-.add-btn:active{
+
+.add-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.clear-all-btn {
+  background-color: #dc3545;
+  color: white;
+  width: 100%;
+}
+
+.filter-buttons button {
+  background-color: #6c757d;
+  color: white;
+}
+
+.filter-buttons button.active {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.list-item {
+  background-color: #17a2b8;
+  color: white;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item .todo-item, .list-item .todo-status {
+  margin: 0;
+}
+
+.list-item.not-started {
+  background-color: #ffc107;
+}
+
+.list-item.in-progress {
+  background-color: #fd7e14;
+}
+
+.list-item.done {
+  background-color: #28a745;
+}
+
+.list-item.done .todo-item {
+  text-decoration: line-through;
+}
+
+
+.icons, .status-btn, .icon-delete {
+  cursor: pointer;
+  transition: transform 0.2s;
+  padding: 5px;
+  border: none;
+  background: none;
+}
+
+.icons i, .status-btn {
+  padding: 5px;
+  border: none;
+  background: none;
+}
+
+.icon-delete:hover {
+  transform: scale(1.2);
+  color: #dc3545;
+}
+
+.status-btn:hover {
+  transform: scale(1.2);
+  color: #28a745;
+}
+
+/* Ensures no outline or box-shadow appears on focus for buttons */
+button:focus, .status-btn:focus, .icon-delete:focus {
+  outline: none;
   box-shadow: none;
 }
-.list-container{
-  display: flex;
-  align-items: center;
-  margin-top: 5px;
-}
-.list-item{
-  list-style-type: none;
-  background-color: #0080FF;
-  border:2px solid black;
-  color:white;
-  padding:3px;
-  padding-left: 5px;
-  border-radius: 5px; 
-  width: 100%;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  position: relative;
-  margin-top: 10px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-.icons{
-  position: absolute;
-  right: 10px;
-}
-.icons i{
-  margin: 4px;
-  font-size: large;
-  cursor: pointer;
-  transition: 0.1s;   
-}
-.icons i:hover{
-  transform: scale(1.2);  
-}
-.icon-delete:hover{
-  color: #00FF80;
+
+.todo-content {
+  flex-grow: 1;
 }
