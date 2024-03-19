@@ -7,7 +7,14 @@ Web Application and Development Security Week 4 Assignment
 
 Functionality:
 1. Add activity to the to do list by clicking the "+" icon or pressing "Enter"
-2. Delete the activity by clicking the "-" icon
+
+2. Filter the activities by their status
+
+3. Update the activity status by clicking the checkbox icon
+
+4. Delete the activity by clicking the "-" icon
+
+5. Clear all activities according to the filter
 
 Screenshot of the web application:
 
